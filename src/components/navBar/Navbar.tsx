@@ -146,7 +146,7 @@ const Navbar: FC = () => {
             <a href="#contact">Contact</a>
           </li>
           <li>
-            <a href="/">FAQ</a>
+            <a href="#faq">FAQ</a>
           </li>
         </Ul>
       </NavBar>
@@ -166,7 +166,7 @@ const Navbar: FC = () => {
             <Link to="#contact">Contact</Link>
           </li>
           <li>
-            <Link to="/">FAQ</Link>
+            <Link to="#faq">FAQ</Link>
           </li>
           <li>
             <button>Hire Me</button>

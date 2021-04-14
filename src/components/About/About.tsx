@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const ABOUT = styled.div`
   margin-top: 1rem;
@@ -14,15 +15,10 @@ const ABOUT = styled.div`
     border-bottom: 2px solid #ececee;
   }
 
-
-.makehidden{
-  display:none;
-  /* visibility:hidden; */
-
-}
-
-
-
+  .makehidden {
+    display: none;
+    /* visibility:hidden; */
+  }
 
   .container {
     width: 70%;
@@ -61,7 +57,7 @@ const ABOUT = styled.div`
   }
 
   .gotoTOp {
-    border:none;
+    border: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -79,23 +75,19 @@ const ABOUT = styled.div`
   }
 `;
 
-
-
 const About = () => {
-  const [readmorebutton,setreadmorebutton] = useState<null|boolean>(false)
- 
+  const [readmorebutton, setreadmorebutton] = useState<null | boolean>(false);
+
   const ReadMore = () => {
     const addReadMore = document.getElementById("addReadMore");
-     addReadMore!.classList.toggle("makehidden")
-     if(addReadMore!.classList.contains("makehidden")){
-       setreadmorebutton(false);
-       console.log('hi')
-     }else{
-
-       setreadmorebutton(true);
-     }
+    addReadMore!.classList.toggle("makehidden");
+    if (addReadMore!.classList.contains("makehidden")) {
+      setreadmorebutton(false);
+      console.log("hi");
+    } else {
+      setreadmorebutton(true);
+    }
   };
-
 
   return (
     <ABOUT id="about">
@@ -104,7 +96,7 @@ const About = () => {
       </div>
       <div className="container">
         <div className="ui">
-          <i className="fas fa-user-alt fa-7x"></i>
+          <i className="far fa-grin-hearts fa-7x"></i>
         </div>
         <h5>
           Hi I am <strong>Morsalin..</strong> <br />
@@ -118,24 +110,31 @@ const About = () => {
           full-stack software developer who loves ❤ to learn and meet
           professionals from different areas. <br /> I will help you transform
           your personal or business concept into a successful based product.
-          <div className="readmoreAdd" id="addReadMore">
-            <br/>
-            <br/>
-          Hi I am Morsalin..
-          I am a Full Stack Web Developer & Programmer also A Freelancer .. specializiing in mostly JS, React, Mern-Stack, but also write Python, C++ and some other stuff.
-          I build modern web applications professionally. I am a passionate full-stack software developer who loves ❤ to learn and meet professionals from different areas.
-          I will help you transform your personal or business concept into a successful based product.
-          hello
-      
+          <div className="makehidden" id="addReadMore">
+            <br />
+            <br />I love solving problems and tackling new issues, always
+            striving to find the most efficient solutions. As a full-stack
+            developer, I can work on projects from the front end to the back
+            end. I design and build website and app experiences as well as the
+            database and server infrastructures that power them.
           </div>
-          <button onClick={ReadMore} id="linkabout" className="readmore">
-            {readmorebutton?"Expand Read More":"Read More"}
+          <button onClick={ReadMore} id="linkabout" >
+            {readmorebutton ? "Close Read More" : " Read More"}
           </button>
         </h5>
       </div>
-      <button className="gotoTOp">
+      <Link
+        className="gotoTOp"
+        to="#services"
+        smooth={true}
+        offset={-70}
+        duration={500}
+        onClick={() => {
+          scroll.scrollTo(0);
+        }}
+      >
         <i className="fas fa-angle-up fa-2x"></i>
-      </button>
+      </Link>
     </ABOUT>
   );
 };

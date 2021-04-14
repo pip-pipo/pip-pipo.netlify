@@ -84,6 +84,7 @@ const CONTACT = styled.div`
     a {
       text-decoration: none;
       color: #263238;
+      
       i {
         font-size: 3rem;
         margin: 0 1rem;
@@ -102,6 +103,37 @@ const CONTACT = styled.div`
       }
     }
   }
+
+ @media screen and (max-width: 360px) {
+
+  .contact_from {
+      width: 70%;
+      margin:auto;
+      .inputEmail input {
+        padding: 0.5rem 2rem;
+      }
+    }
+
+
+    .medias {
+    
+    margin:1rem;
+    a {
+      text-decoration: none;
+      color: #263238;
+      &:hover{
+        color:#0c7567;
+      }
+      i {
+        font-size: 2rem;
+        margin: 0 1rem;
+      }
+    }
+  }
+
+
+ }
+  
 `;
 
 const Contact = () => {
@@ -123,20 +155,19 @@ const Contact = () => {
         <div>
           <h4 className="social_media">My Social Media</h4>
           <div className="medias">
-            <a href="/">
+            <a href="https://www.facebook.com/mmmmorsalin1/">
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="/">
+            <a href="https://twitter.com/MrMorsalin1">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="/">
+            <a href="https://www.instagram.com/pyjonathon/">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="/">
+            <a href="https://www.github.com/pip-pipo">
               <i className="fab fa-github"></i>
             </a>
-
-            <a href="/">
+            <a href="https://www.fiverr.com/mr_morsalin?up_rollout=true">
               <img id="fiverr" src={Fiverr} alt="" />
             </a>
           </div>

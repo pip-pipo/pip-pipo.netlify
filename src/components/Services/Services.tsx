@@ -101,6 +101,22 @@ transform: scale(0.8) skew(-11deg, 0deg);
     }
   }
 
+  @media screen and (max-width: 360px) {
+    .container {
+      width: 100%;
+      color:white;
+    }
+    .containerCardServices {
+      flex-direction: column;
+    }
+    .mainMiddle{
+  height:auto;
+}
+    .containerCard {
+      width: 90%;
+    }
+  }
+
 
 `;
 

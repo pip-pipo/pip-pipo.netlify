@@ -95,6 +95,20 @@ const FullBg = styled.div`
         }
     }
 }
+
+
+@media screen and (max-width: 360px) {
+  h3{
+            font-size:0.60rem;
+            padding:0.20rem;
+            white-space: nowrap;
+        }
+        button{
+            font-size:0.80rem;
+        }
+
+}
+
 `;
 
 const Home: FC = () => {
