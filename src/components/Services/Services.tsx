@@ -69,11 +69,13 @@ const SERVICES = styled.div`
     &:hover{
 background: #5d7290;
 color:white;
+
 -moz-transform: scale(0.8) skew(-11deg, 0deg);
 -webkit-transform: scale(0.8) skew(-11deg, 0deg);
 -o-transform: scale(0.8) skew(-11deg, 0deg);
 -ms-transform: scale(0.8) skew(-11deg, 0deg);
-transform: scale(0.8) skew(-11deg, 0deg);
+transform: scale(0.9) skew(-11deg, 0deg);
+
     }
     
     .heading {
@@ -159,7 +161,7 @@ const Services = () => {
               <i className="fas fa-cogs fa-4x"></i>
             </div>
             <div className="description">
-            ✔I am a full-stack web development with over 2+ years of experience and a deep passion for programming. <br/> I specialize in responsive web and application development for small to medium size businesses
+            ✔I am a full-stack web developer with over 2+ years of experience and a deep passion for programming. <br/> I specialize in responsive web and application development for small to medium size businesses
             <h3>Technology's :</h3>
 
             * <b> Frontend</b> - HTML/CSS/javascript/typescript/Bootstrap, React.js, Redux,
