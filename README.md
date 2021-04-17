@@ -1,3 +1,3 @@
 # pip-pipo static web site will react and typescript
 
-[FinalDemo](https://pip-pipo.netlify.app)
+[FinalDemo](https://py-jonathon.netlify.app)
